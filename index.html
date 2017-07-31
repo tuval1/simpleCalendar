@@ -1,0 +1,65 @@
+<html>
+<head>
+    <title>Calendar</title>
+    <link rel="icon" href="assets/calendar.ico">
+    <link rel="stylesheet" href="css/style.css">
+   
+</head>
+<body onload="init()">
+     
+<div class="container">
+
+  <table class="datepicker">
+    <caption class="datepicker-caption">
+      <a href="#" class="datepicker-prev" onclick="browseCal(-1)">Previous</a>
+      <span class="datepicker-title month-label"></span>
+      <a href="#" class="datepicker-next" onclick="browseCal(1)">Next</a>
+    </caption>
+    <thead class="datepicker-head">
+      <tr>
+        <th class="datepicker-th">Mo</th>
+        <th class="datepicker-th">Tu</th>
+        <th class="datepicker-th">We</th>
+        <th class="datepicker-th">Th</th>
+        <th class="datepicker-th">Fr</th>
+        <th class="datepicker-th">Sa</th>
+        <th class="datepicker-th">Su</th>
+      </tr>
+    </thead>
+    <tbody class="calendar-body">      
+      
+    </tbody>
+  </table>
+   
+ 
+
+</div>
+
+<div class="show-meetings">
+  
+</div>
+
+<div class="modal hidden">
+  <!--<input type="hidden" value="" name="startDate" id="startDate">-->
+  <h2>Add New Meeting</h2>
+  <div class="form-style-6">
+  <label>Title: 
+<input type="text" name="title" id="title" placeholder="Title"><br>
+  </label>
+  <label>Start Date: 
+<input type="date" name="startDate" id="startDate" placeholder="Start Date"><br>
+  </label>
+  <label>End Date: 
+<input type="date" name="endDate" id="endDate" value="" placeholder="End Date"><br>
+  </label>
+  <label>Participants:
+    <input type="text" value="" name="participants" id="participants">
+  </label>
+<button type="submit" onclick="addMeeting()" class="btn">Send</button>
+  </div>
+  </div>
+
+
+<script src="js/calendar.js"></script>
+</body>
+</html>
